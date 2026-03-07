@@ -66,6 +66,7 @@ export const JobFinderScreen = ({ navigation }: any) => {
           salary: salaryText,
           location: locationText,
           description: job.description || "",
+          companyLogo: job.companyLogo || undefined,
         };
       });
 

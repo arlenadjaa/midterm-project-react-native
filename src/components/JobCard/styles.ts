@@ -10,6 +10,32 @@ export const getStyles = (isDarkMode: boolean) =>
       borderWidth: 1,
       borderColor: isDarkMode ? "#333" : "#ddd",
     },
+    // --- NEW STYLES FOR THE LAYOUT ---
+    topContainer: {
+      flexDirection: "row",
+      justifyContent: "space-between",
+      alignItems: "flex-start",
+    },
+    textContainer: {
+      flex: 1, // Ensures long titles wrap and don't push the image off-screen
+      paddingRight: 12,
+    },
+    logo: {
+      width: 50,
+      height: 50,
+      borderRadius: 8,
+      backgroundColor: isDarkMode ? "#2c2c2c" : "#f0f0f0",
+    },
+    placeholderLogo: {
+      justifyContent: "center",
+      alignItems: "center",
+    },
+    placeholderText: {
+      fontSize: 20,
+      fontWeight: "bold",
+      color: isDarkMode ? "#666" : "#aaa",
+    },
+    // ---------------------------------
     title: {
       fontSize: 18,
       fontWeight: "bold",
