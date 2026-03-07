@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
 import {
-    Alert,
-    ScrollView,
-    Text,
-    TextInput,
-    TouchableOpacity
+  Alert,
+  ScrollView,
+  Text,
+  TextInput,
+  TouchableOpacity,
 } from "react-native";
 import { AppContext } from "../../context/AppContext";
 import { getStyles } from "./styles";
@@ -52,7 +52,7 @@ export const ApplicationFormScreen = ({ route, navigation }: any) => {
             // Redirection Rules
             if (fromSaved) {
               // Redirect to Job Finder screen if opened from Saved Jobs
-              navigation.navigate("Job Finder");
+              navigation.navigate("MainTabs", { screen: "Job Finder" });
             } else {
               navigation.goBack();
             }
