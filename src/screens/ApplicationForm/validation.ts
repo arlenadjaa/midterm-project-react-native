@@ -13,7 +13,13 @@ export const validateApplicationForm = (
 ): FormErrors => {
   const errors: FormErrors = {};
 
-  if (!name.trim()) errors.name = "Name is required.";
+  const nameRegex = /^[a-zA-Z\s\-']+$/;
+
+  if (!name.trim()) {
+    errors.name = "Name is required.";
+  } else if (!nameRegex.test(name)) {
+    errors.name = "Name cannot contain numbers or special characters.";
+  }
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!email.trim()) {
